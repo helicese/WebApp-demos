@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>text & file</title>
+    <style>
+        form {
+            width: 500px;
+            font-family: Arial;
+        }
+        h1{
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            line-height: 50px;
+            color: #1E88C7;
+            margin:0px;
+        }
+
+        /*only changing the border can result in the beauty of text input*/
+        #text{
+            position: relative;
+            display: inline-block;
+            width: 250px;
+            font-size: 20px;
+            border: 1px solid #99D3F5;
+            border-radius: 4px;
+            padding: 4px 12px;
+            margin: 10px 30px 10px 5px;
+            color: #1E88C7;
+            line-height: 30px;
+            vertical-align: middle;
+        }
+
+        /*button beautifying*/
+        .submit{
+            position: relative;
+            display: inline-block;
+            font-size: 20px;
+            background: #D0EEFF;
+            border: 1px solid #99D3F5;
+            border-radius: 4px;
+            padding: 4px 12px;
+            color: #1E88C7;
+            vertical-align: middle;
+            text-decoration: none;
+            overflow: hidden;
+            line-height: 30px;
+            cursor: pointer;
+        }
+        .submit:hover{
+            background: #AADFFD;
+            border-color: #78C3F3;
+            color: #004974;
+        }
+
+        .fileForm {
+            position: relative;
+            margin-top: 20px;
+        }
+
+        /*beautify the file upload component*/
+        .file {
+            position: relative;
+            display: inline-block;
+            background: #D0EEFF;
+            border: 1px solid #99D3F5;
+            border-radius: 4px;
+            padding: 4px 12px;
+            font-size: 20px;
+            margin: 10px 5px;
+            overflow: hidden;
+            color: #1E88C7;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 30px;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+        .file input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .file:hover {
+            background: #AADFFD;
+            border-color: #78C3F3;
+            color: #004974;
+            text-decoration: none;
+        }
+        #result {
+            position: relative;
+            vertical-align: middle;
+            display: inline-block;
+            margin-right: 40px;
+            line-height: 30px;
+            color: #999;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="127.0.0.1:3000" class="textForm">
+        <h1>input some text</h1>
+        <input type="text" name="line" id="text" placeholder="input">
+        <input type="submit" class="submit" value="submit">
+    </form>
+
+    <form action="127.0.0.1:3000" class="fileForm">
+        <h1>upload a file</h1>
+        <span class="file" id="fileContainer">choose file
+            <input type="file" name="file" id="fileUpload">
+        </span>
+        <span id="result">no file chosen</span>
+        <input type="submit" class="submit" id="sub2" value="submit">
+    </form>
+    <script>
+        var container = document.getElementById('fileContainer');
+        var fileUpload = document.getElementById('fileUpload');
+        var result = document.getElementById('result');
+        container.onchange = function(){
+            if(!fileUpload.value) {
+                result.innerHTML = 'no file chosen';
+                return;
+            }
+            var path = fileUpload.value;
+
+            //get the file name to show
+            if(path.indexOf('\\'))
+                var fileName = path.substring(path.lastIndexOf('\\')+1);
+            else if(path.indexOf('\/'))
+                var fileName = path.substring(path.lastIndexOf('\/')+1);
+            else
+                alert('wrong input');
+
+            //get the type of the file
+            var end = path.substring(path.lastIndexOf('\.')+1);
+            if(end !== 'pdf') {
+                result.innerHTML = fileName;
+                result.style.color = 'red';
+                alert(' pdf only!!!');
+                return;
+            } else {
+                result.innerHTML = fileName;
+                result.style.color = '#999';
+            }
+        }
+    </script>
+</body>
+</html>
