@@ -100,6 +100,12 @@
             color: #999;
             font-size: 20px;
         }
+        #sub2:disabled {
+            background-color: #ccc;
+            color: #999;
+            border: 1px solid #bbb;
+            cursor: auto;
+        }
     </style>
 </head>
 <body>
@@ -121,6 +127,7 @@
         var container = document.getElementById('fileContainer');
         var fileUpload = document.getElementById('fileUpload');
         var result = document.getElementById('result');
+        var sub2 = document.getElementById('sub2');
         container.onchange = function(){
             if(!fileUpload.value) {
                 result.innerHTML = 'no file chosen';
@@ -141,11 +148,13 @@
             if(end !== 'pdf') {
                 result.innerHTML = fileName;
                 result.style.color = 'red';
+                sub2.disabled = true;
                 alert(' pdf only!!!');
                 return;
             } else {
                 result.innerHTML = fileName;
                 result.style.color = '#999';
+                sub2.disabled = false;
             }
         }
     </script>

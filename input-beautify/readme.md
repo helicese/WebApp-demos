@@ -4,8 +4,10 @@
 ![init.JPG-21.7kB](http://static.zybuluo.com/helicese/ydszly8j9t7v9dnafd3y7kyy/init.JPG)
 ### when choose the correct file
 ![right.JPG-21.8kB](http://static.zybuluo.com/helicese/1wsm0nucmy9fq58tlgzah6fn/right.JPG)
+
 ### when choose the incorrect file
-![wrong.JPG-30.5kB](http://static.zybuluo.com/helicese/rln0ww5nfe7gpd77orya6sci/wrong.JPG)
+![wrong.JPG-30.5kB](http://static.zybuluo.com/helicese/fmllji3xzus9ipb8v2kdj1nz/wrong.JPG)
+- when the chosen file is of the wrong type, just disable the submit button
 
 #beautify the input of text
 - so easy, just change the style of the border
