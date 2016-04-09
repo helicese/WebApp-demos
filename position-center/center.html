@@ -6,21 +6,40 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+
     <div class="container" id='way1'>
-        <div class="content">margin负一半</div>
+    <h3>负外边距方法</h3>
+    <p></p>
+        <div class="content">
+            <pre>
+    .content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 240px;
+        height: 240px;
+        margin-top: -120px;
+        margin-left: -120px;
+    }
+            </pre>
+        </div>
     </div>
+
     <div class="container" id='way2'>
         <div class="content">margin auto</div>
     </div>
+
     <div class="container" id='way3'>
         <div class="floater"></div>
         <div class="content">float</div>
     </div>
+
     <div class="container" id='way4'>
         <div class="cell">
             <div class="content">display as a table</div>
         </div>
     </div>
+
     <div class="container" id='way5'>
         <div class="content">one line text vertical-center</div>
     </div>

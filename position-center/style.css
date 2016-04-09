@@ -1,16 +1,21 @@
 h1 {
     color: red;
 }
+html,body {
+    height: 100%;
+}
 .container {
-    position: relative;
+    float: left;
     margin: 10px 0;
-    height: 400px;
+    height: 80%;
+    width: 19.5%;
+    border-right: 2px dashed #000;
     background-color: #CCFF99;
+    position: relative;
 }
 .content {
     background-color: #ddd;
 }
-
 #way1 .content{
     position: absolute;
     top: 50%;
