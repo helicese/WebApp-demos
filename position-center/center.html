@@ -7,9 +7,16 @@
 </head>
 <body>
 
-    <div class="container" id='way1'>
-    <h3>负外边距方法</h3>
-    <p></p>
+    <div class="container" id='way1-1'>
+    <h3>absolute position: negative margin</h3>
+    <p class="header">this way uses absolute position and makes the content element out of the normal flow, which is not good for some situation. Other than that, it's a good way to use</p>
+    <ul class='footer'>
+        <li class="good">doesn't require addtional objects</li>
+        <li class="good">easy and simple</li>
+        <li class="good">fit for all browsers</li>
+        <li class="bad">only for elements with fixed height and width</li>
+        <li class="bad">need 'overflow:auto' to avoid overflow</li>
+    </ul>
         <div class="content">
             <pre>
     .content{
@@ -20,22 +27,63 @@
         height: 240px;
         margin-top: -120px;
         margin-left: -120px;
+        overflow: auto;
     }
             </pre>
         </div>
     </div>
 
+    <div class="container" id="way1-2">
+    <h3>absolute position: negative transform</h3>
+    <p class="header">this way is similar to former way</p>
+        <div class="content">
+            <pre>
+    .content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+            </pre>
+        </div>
+        <ul class="footer">
+            <li class="good">doesn't need fixed height and width</li>
+            <li class="good">doesn't require addtional objects</li>
+            <li class="bad">needs CSS3 support</li>
+        </ul>
+    </div>
     <div class="container" id='way2'>
-        <div class="content">margin auto</div>
+    <h3>absolute position: stretching</h3>
+    <p class="header">'margin:auto' makes the center, extends the margin of content element to the whole parent</p>
+        <div class="content">
+        <pre>
+    .content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        width: 240px;
+        height: 240px;
+        overflow: auto;
+    }
+        </pre>
+        </div>
+        <ul class="footer">
+            <li class="good">fits for all browsers</li>
+            <li class="bad">only for elements with fixed height and width</li>
+            <li class="bad">needs 'overflow:auto' to avoid overflow</li>
+        </ul>
     </div>
 
     <div class="container" id='way3'>
-        <div class="floater"></div>
+        <div class="floater support"></div>
         <div class="content">float</div>
     </div>
 
     <div class="container" id='way4'>
-        <div class="cell">
+        <div class="cell support">
             <div class="content">display as a table</div>
         </div>
     </div>

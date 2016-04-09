@@ -1,5 +1,6 @@
-h1 {
-    color: red;
+h3 {
+    width: 98%;
+    border-bottom: 1px solid #999;
 }
 html,body {
     height: 100%;
@@ -10,13 +11,37 @@ html,body {
     height: 80%;
     width: 19.5%;
     border-right: 2px dashed #000;
-    background-color: #CCFF99;
+    background-color: #CCFFCC;
     position: relative;
+}
+.support {
+    background-color: #CCFF99;
 }
 .content {
     background-color: #ddd;
+    opacity: 0.6;
 }
-#way1 .content{
+.header {
+    margin: 5px 10px;
+    position: relative;
+    background-color: #fff;
+    top: 0px;
+    opacity: 0.6;
+}
+.footer {
+    position: relative;
+    top: 60%;
+    width: 90%;
+    background-color: #fff;
+    opacity: 0.6;
+}
+.good {
+    color: green;
+}
+.bad {
+    color: red;
+}
+#way1-1 .content{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -24,6 +49,14 @@ html,body {
     height: 240px;
     margin-top: -120px;
     margin-left: -120px;
+    overflow: auto;
+}
+
+#way1-2 .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #way2 .content{
@@ -35,11 +68,13 @@ html,body {
     margin: auto;
     width: 240px;
     height: 240px;
+    overflow:auto;
 }
 
 #way3 .floater {
     float: left;
     height: 50%;
+    width: 100%;
     margin-bottom: -120px;
 }
 
