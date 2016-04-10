@@ -6,9 +6,10 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
+    <h1>absolute position, center both vertically and horizontally</h1>
+    <div class="br"></div>
     <div class="container" id='way1-1'>
-    <h3>absolute position: negative margin</h3>
+    <h3>way1-1:absolute position: negative margin</h3>
     <p class="header">this way uses absolute position and makes the content element out of the normal flow, which is not good for some situation. Other than that, it's a good way to use</p>
     <ul class='footer'>
         <li class="good">doesn't require addtional objects</li>
@@ -34,7 +35,7 @@
     </div>
 
     <div class="container" id="way1-2">
-    <h3>absolute position: negative transform</h3>
+    <h3>way1-2:absolute position: negative transform</h3>
     <p class="header">this way is similar to former way</p>
         <div class="content">
             <pre>
@@ -52,8 +53,9 @@
             <li class="bad">needs CSS3 support</li>
         </ul>
     </div>
+
     <div class="container" id='way2'>
-    <h3>absolute position: stretching</h3>
+    <h3>way2: absolute position: stretching</h3>
     <p class="header">'margin:auto' makes the center, extends the margin of content element to the whole parent</p>
         <div class="content">
         <pre>
@@ -74,21 +76,111 @@
             <li class="good">fits for all browsers</li>
             <li class="bad">only for elements with fixed height and width</li>
             <li class="bad">needs 'overflow:auto' to avoid overflow</li>
+            <li class="bad">not for IE</li>
         </ul>
     </div>
 
+    <h1>centering vertically</h1>
+    <div class="br"></div>
     <div class="container" id='way3'>
+        <h3 class='absolute'>way3:hidden floater</h3>
+        <p class="headerAb">use a hidden floater with 50% height and negative half the height to vertically center the element. This is similar to way1-1 but without absolute position. Also the <b>'margin: 0 auto'</b> makes the element horizontally centered</p>
         <div class="floater support"></div>
-        <div class="content">float</div>
+        <div class="content">
+            <pre>
+    #way3 .floater {
+        float: left;
+        height: 50%;
+        width: 100%;
+        margin-bottom: -120px;
+    }
+
+    #way3 .content{
+        clear: both;
+        height: 240px;
+        width: 240px;
+        /*the margin is to do the horizontal center*/
+        margin: 0 auto;
+        position: relative;
+    }
+            </pre>
+        </div>
+        <ul class="footerAb">
+            <li class="good">fits for all browsers</li>
+            <li class="bad">need fixed height</li>
+            <li class="bad">need an addtional floater element</li>
+        </ul>
     </div>
 
     <div class="container" id='way4'>
+            <h3 class="absolute">way4: display as a table </h3>
         <div class="cell support">
-            <div class="content">display as a table</div>
+            <p class="headerAb">use table&table-cell display and vertical-align and we can vertically center the element</p>
+            <div class="content">
+            <pre>
+    #way4 {
+        display: table;
+    }
+    #way4 .cell {
+        display: table-cell;
+        vertical-align: middle;
+    }
+            </pre>
+            </div>
+            <ul class="footerAb">
+                <li class="good">does not need fixedd height</li>
+                <li class="good">height is determined by the content</li>
+                <li class="bad">not for IE</li>
+                <li class="bad">needs additional elements</li>
+            </ul>
         </div>
     </div>
-
+    <h1>inline element</h1>
+    <div class="br"></div>
+    <div class="container" id="intro">
+        <h3>way5: inline ghost element</h3>
+        <p class="header">This is the describtion od the right demo. look at the picture below, we use a inline ghost element with 100% height, the vertical-align property makes all the inline elements vertically centered</p>
+        <img src="http://static.zybuluo.com/helicese/gq21tq2ouzavtlcitxydj9rw/ghost.png" alt="">
+        <ul class="footer">
+            <li class="good">does not need fixed height</li>
+            <li class="bad">maybe usable only with single children </li>
+        </ul>
+    </div>
     <div class="container" id='way5'>
+        <div class="content">
+        <pre>
+#way5 {
+    text-align: center;
+    white-space: nowrap;
+}
+
+#way5:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: center;
+}
+
+#way5 .content {
+    display: inline-block;
+    vertical-align: middle;
+    width: 300px;
+}
+        </pre>
+        </div>
+    </div>
+    <div class="container" id='way6'>
+    <h3>way6: one-line element center</h3>
+    <p class="header">
+        for inline elements, <b>'text-align: center'</b> is enough to horizontally center the element. And the way vertically centering the element can be similar to the <b>'ghost element way'</b> on the left. Especially, when there is only one line, we can equal the height and line-height to achieve the vertical center.
+    </p>
+    <pre>
+    #way6 .content {
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+    }
+    </pre>
         <div class="content">one line text vertical-center</div>
     </div>
 

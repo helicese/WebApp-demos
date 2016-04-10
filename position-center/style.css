@@ -1,21 +1,40 @@
+h1 {
+    float: left;
+    clear: both;
+}
 h3 {
+    padding-left: 10px;
     width: 98%;
     border-bottom: 1px solid #999;
 }
 html,body {
+    /*make the body to be as tall as browser window*/
     height: 100%;
+}
+img {
+    position: absolute;
+    display: block;
+    top: 50%;
+    -webkit-transform: translate(0,-50%) ;
+    -ms-transform: translate(0,-50%) ;
+    -o-transform: translate(0,-50%) ;
+    transform: translate(0,-50%) ;
+    width: 100%;
+}
+#intro {
+    border-right: 1px solid white;
 }
 .container {
     float: left;
     margin: 10px 0;
     height: 80%;
-    width: 19.5%;
+    width: 24%;
     border-right: 2px dashed #000;
-    background-color: #CCFFCC;
+    background-color: #A0F157;
     position: relative;
 }
 .support {
-    background-color: #CCFF99;
+    background-color: rgba(239, 252, 216, 0.5);
 }
 .content {
     background-color: #ddd;
@@ -26,14 +45,33 @@ html,body {
     position: relative;
     background-color: #fff;
     top: 0px;
+    height: 120px;
+    opacity: 0.6;
+}
+.headerAb {
+    margin: 5px 10px;
+    position: absolute;
+    background-color: #fff;
+    top: 8%;
+    height: 120px;
     opacity: 0.6;
 }
 .footer {
     position: relative;
-    top: 60%;
+    top: 55%;
     width: 90%;
     background-color: #fff;
     opacity: 0.6;
+}
+.footerAb {
+    position: absolute;
+    bottom: 10%;
+    width: 90%;
+    background-color: #fff;
+    opacity: 0.6;
+}
+.absolute {
+    position: absolute;
 }
 .good {
     color: green;
@@ -41,6 +79,12 @@ html,body {
 .bad {
     color: red;
 }
+.br {
+    float: left;
+    clear: left;
+}
+
+
 #way1-1 .content{
     position: absolute;
     top: 50%;
@@ -57,6 +101,12 @@ html,body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+#way1-3 .content {
+    height: 240px;
+    width: 240px;
+    margin: auto;
 }
 
 #way2 .content{
@@ -82,7 +132,10 @@ html,body {
     clear: both;
     height: 240px;
     width: 240px;
+    /*the margin is to do the horizontal center*/
+    margin: 0 auto;
     position: relative;
+    overflow: auto;
 }
 
 #way4 {
@@ -93,8 +146,27 @@ html,body {
     vertical-align: middle;
 }
 
+#way5 {
+    text-align: center;
+    white-space: nowrap;
+}
+
+#way5:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
 
 #way5 .content {
+    display: inline-block;
+    vertical-align: middle;
+    width: 300px;
+    margin: 0 auto;
+}
+
+#way6 .content {
     height: 100px;
+    text-align: center;
     line-height: 100px;
 }
