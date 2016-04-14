@@ -1,0 +1,142 @@
+html,body {
+    height: 100%;
+    font-family: "黑体";
+}
+
+form {
+    width: 500px;
+    font-family: Arial;
+}
+h1{
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    line-height: 50px;
+    color: #1E88C7;
+    margin:0px;
+}
+
+.main{
+    z-index:1;
+    width: 500px;
+    height: 350px;
+    position: absolute;
+    padding: 10px;
+    left:50%;
+    top:50%;
+    margin: -200px 0 0 -250px;
+}
+
+/*only changing the border can result in the beauty of text input*/
+.text{
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    font-size: 20px;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    margin: 10px 30px 10px 5px;
+    color: #1E88C7;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+/*button beautifying*/
+.submit{
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    color: #1E88C7;
+    vertical-align: middle;
+    text-decoration: none;
+    overflow: hidden;
+    line-height: 30px;
+    cursor: pointer;
+}
+.submit:hover{
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+}
+
+.fileForm {
+    position: relative;
+    margin-top: 20px;
+}
+
+/*beautify the file upload component*/
+.file {
+    position: relative;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    font-size: 20px;
+    margin: 10px 5px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 30px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+.file:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}
+#result {
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 40px;
+    line-height: 30px;
+    color: #999;
+    font-size: 20px;
+}
+.submit:disabled {
+    background-color: #ccc;
+    color: #999;
+    border: 1px solid #bbb;
+    cursor: auto;
+}
+#mask {
+    width: 100%;
+    height:30%;
+    z-index: 9;
+    /*background-color: rgba(0,0,0,1);*/
+}
+#messageBox {
+    width: 400px;
+    height: 100px;
+    position: fixed;
+    border-bottom: 1px solid #ddd;
+    top: 5%;
+    left: 50%;
+    margin-left: -200px;
+    padding: 10px;
+    z-index: 10;
+    font-size: 30px;
+    vertical-align: bottom;
+    line-height: 150px;
+    text-align: center;
+    color: #1E88C7;
+    -webkit-transition: opacity 0.5s, top 0.5s;
+    opacity: 0;
+}

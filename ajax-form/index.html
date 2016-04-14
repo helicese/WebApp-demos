@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax-form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+     <div class="main">
+        <form action="" class="form" method="post" onsubmit="return handeler(this)" id="qqq">
+            <h1>输入内容<span></span></h1>
+            <input type="text" name="line" class="text" placeholder="输入文字">
+            <input type="submit" class="submit" id="sub1">
+        </form>
+        <form action="" class="form" method="post" onsubmit="return handeler(this)">
+            <h1>输入TTS</h1>
+            <input type="text" name="tts" class="text" placeholder="输入TTS">
+            <input type="submit" class="submit" id='sub3'>
+        </form>
+        <form action="" class="fileForm" method="post" enctype="multipart/form-data" onsubmit="return handeler2(this)">
+            <h1>上传文件<span></span></h1>
+            <span class="file" id="fileContainer">选择文件
+                <input type="file" name="file" id="fileUpload">
+            </span>
+            <span id="result">未选择任何文件</span>
+            <input type="submit" class="submit" id="sub2">
+        </form>
+    </div>
+    <div id="mask"></div>
+    <div id="messageBox">你好哇发送成功</div>
+    <script src="./ajax.js"></script>
+</body>
+</html>
