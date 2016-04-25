@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-     <div class="main">
+     <div class="mainLeft">
         <form action="" class="form" method="post" onsubmit="return handeler(this)" id="qqq">
             <h1>输入内容<span></span></h1>
             <input type="text" name="line" class="text" placeholder="输入文字">
@@ -25,6 +25,18 @@
             <span id="result">未选择任何文件</span>
             <input type="submit" class="submit" id="sub2">
         </form>
+    </div>
+    <div class="mainRight">
+        <h1>Log信息</h1>
+        <div class="logControl">
+            <button class="submit" id="start" onclick="startLog()">开始记录</button>
+            <button class="submit" id="pause" onclick="pauseLog()">暂停</button>
+            <button class="submit" id="clear" onclick="clearLog()">清空</button>
+            <input type="text" class="text" placeholder="输入文字"><button class="submit" id="filter">搜索</button>
+        </div>
+        <div id="log">
+            <span class="green">Recording ...</span></br>
+        </div>
     </div>
     <div id="mask"></div>
     <div id="messageBox">你好哇发送成功</div>

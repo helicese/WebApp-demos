@@ -3,9 +3,13 @@ var fileUpload = document.getElementById('fileUpload');
 var result = document.getElementById('result');
 var text = document.getElementsByClassName('text');
 var messageBox = document.getElementById('messageBox');
+var log = document.getElementById('log');
+var startDom = document.getElementById('start');
+var pauseDom = document.getElementById('pause');
 var sub1 = document.getElementById('sub1');
 var sub2 = document.getElementById('sub2');
 var sub3 = document.getElementById('sub3');
+var logSwitch = true;
 
 //ajax snippets, copyed from http://stackoverflow.com/questions/8567114/how-to-make-an-ajax-call-without-jquery
 var ajax = {};
@@ -89,9 +93,29 @@ function hideMessage() {
     messageBox.style.top = '5%';
 };
 
+function addLog(item) {
+    log.innerHTML = log.innerHTML + item + '</br>';
+};
+function clearLog() {
+    log.innerHTML = logSwitch ? '<span class="green">Recording ...</span></br>' : '<span class="red">Pause ... </span></br>';
+};
+function startLog() {
+    startDom.style.backgroundColor = "green";
+    pauseDom.style.backgroundColor = "#fff";
+    addLog('<span class="green">Recording ...</span>');
+    logSwitch = true;
+};
+function pauseLog() {
+    startDom.style.backgroundColor = "#fff";
+    pauseDom.style.backgroundColor = "green";
+    addLog('<span class="red">Pause ... </span>')
+    logSwitch = false;
+};
 var handeler = function (form) {
     var oData = form.elements[0].name == 'line'? {line: form.elements[0].value} : {tts: form.elements[0].value};
     ajax.post('', oData, function(item){
+        if(logSwitch)
+            addLog(item);
         showMessage(form);
     });
     return false;
@@ -106,6 +130,8 @@ var handeler2 = function(form) {
     oReq.onload = function(oEvent) {
         if (oReq.status == 200) {
             showMessage(form);
+            if(logSwitch)
+                addLog(oReq.response);
         } else {
             showMessage(form);
             messageBox.innerHTML = "Error: " + oReq.status + "<br \/>";
