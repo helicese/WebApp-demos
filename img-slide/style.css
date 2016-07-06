@@ -21,11 +21,11 @@ ol, ul {list-style: none; margin:0; padding:0;}
 .hot-fashion .ft p{height: 26px; padding-left:10px; position: absolute; line-height: 13px; top: 50%; margin-top: -13px; font-family: "微软雅黑"; font-size: 10px; left: 46px; color: #FFFFFD; border-left:1px solid #575352;}
 .hot-fashion .ft span{color: #ADA49D;}
 .main .img-container{width: 510px; height: 270px; float: left; position: relative; overflow: hidden;}
-.main .img-container .img-list{width: 1530px; height: 270px; position: absolute;}
+.main .img-container .img-list{width: 2040px; height: 270px; position: absolute;}
 .img-container .img-list img{float:left;}
 
-.main .nav-btn li{width: 16px; height:16px; border: 1px solid #B0A7A2; color:#E17F29; background-color: #FEFEFF; float: right; position:relative; top:244px; right:2px; margin-right:6px; text-align:center; line-height:16px;}
-.main .nav-btn li .active{background-color: #B4A592; color:#FEFBF4; border: 2px solid #B4A592;}
+.main .nav-btn{width: 16px; height:16px; border: 1px solid #B0A7A2; color:#E17F29; background-color: #FEFEFF; float: right; position:relative; top:244px; right:2px; margin-right:6px; text-align:center; line-height:16px;}
+.main .active{background-color: #B4A592; color:#FEFBF4; border: 2px solid #B4A592;}
 .sidebar{height: 270px; width: 190px; position: absolute; padding: 10px; right: 0; border: 1px solid #dedede;}
 .sidebar .hd{width: 190px; height: 58px; background-image: url("./img/sidebar-hd.jpg"); margin-bottom: 1px;}
 .sidebar .bd li{width: 190px; height: 105px; background-color: #DE2D6D; position:relative; color:#FFECF7;}
