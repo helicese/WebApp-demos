@@ -1,41 +1,43 @@
-*{margin:0;}
-html,body{margin:0; height:100%;}
-h1,h2,h3,h4,h5,h6,p{margin:0; padding:0;}
-ol, ul {list-style: none; margin:0; padding:0;}
-.container{width: 954px; height: 290px; position: absolute; margin: auto auto; top: 0; bottom: 0; left: 0; right: 0;}
-/*left part*/
-.main{height: 270px; width: 721px; position: absolute; padding: 10px; border: 1px solid #dedede;}
-.main .hot-fashion{width: 211px; height: 270px; float: left;}
-.hot-fashion .hd{width: 211px; height: 58px; background-color: #b3a593; position: relative; background-image: url("./img/hf-hd.jpg");}
-.hot-fashion .bd{width: 211px; height: 154px; padding: 9px 0 5px 0; background-color: #eaeaea; border-bottom: 1px solid #F2E8DE;}
-.hot-fashion .bd li{height: 26px; line-height: 24px; position:relative; font-size: 10px; font-family: '微软雅黑'; white-space: nowrap; }
-.hot-fashion .bd li:first-child{height: 25px}
-.hot-fashion .bd li:last-child{height: 25px}
-.hot-fashion .bd .bd-dot{display:inline-block; width:3px; height:3px; margin-left:9px; background-color: #000; line-height: 24px; position:absolute; top:50%; margin-top: -1.5px;}
-.hot-fashion .bd p{padding-left:8px; position:absolute; left:9px; border-bottom: 1px solid #D8D8D8; border-top: 1px solid #FFFFFF;}
-.hot-fashion .bd span{color: #A8397B;}
-.hot-fashion .bd .bd-first{border-top: none;}
-.hot-fashion .bd .bd-last{border-bottom: none;}
-.hot-fashion .ft{background-color: #443E3E; position: relative; height:41px;border-top:2px solid #ACA59D;}
-.hot-fashion .ft .ft-logo{width:45px; height:26px; background-image: url('./img/ft-logo.jpg'); background-position:center; background-repeat:no-repeat; position:absolute; top:50%; margin-top:-13px; border-right:1px solid #1F1B17;}
-.hot-fashion .ft p{height: 26px; padding-left:10px; position: absolute; line-height: 13px; top: 50%; margin-top: -13px; font-family: "微软雅黑"; font-size: 10px; left: 46px; color: #FFFFFD; border-left:1px solid #575352;}
-.hot-fashion .ft span{color: #ADA49D;}
-.main .img-container{width: 510px; height: 270px; float: left; position: relative; overflow: hidden;}
-.main .img-container .img-list{width: 2040px; height: 270px; position: absolute;}
-.img-container .img-list img{float:left;}
+* { margin: 0; }
+html, body { margin: 0; height: 100%; }
+h1, h2, h3, h4, h5, h6, p { margin: 0; padding: 0; }
+ol, ul { list-style: none; margin: 0; padding: 0; }
+.container { width: 954px; height: 290px; position: absolute; margin: auto auto; top: 0; bottom: 0; left: 0; right: 0; }
 
-.main .nav-btn{width: 16px; height:16px; border: 1px solid #B0A7A2; color:#E17F29; background-color: #FEFEFF; float: right; position:relative; top:244px; right:2px; margin-right:6px; text-align:center; line-height:16px;}
-.main .active{background-color: #B4A592; color:#FEFBF4; border: 2px solid #B4A592;}
-.sidebar{height: 270px; width: 190px; position: absolute; padding: 10px; right: 0; border: 1px solid #dedede;}
-.sidebar .hd{width: 190px; height: 58px; background-image: url("./img/sidebar-hd.jpg"); margin-bottom: 1px;}
-.sidebar .bd li{width: 190px; height: 105px; background-color: #DE2D6D; position:relative; color:#FFECF7;}
-.sidebar .bd li:first-child{height: 104px; border-top:1px solid #A04D6A; border-bottom: 1px dotted #FC6BA6;}
-.sidebar .bd .bd-photo{position:absolute; left:8px; top:8px; border-left:1px solid #A94A69;}
-.sidebar .bd .bd-name{position:absolute; top:10px; left: 100px; font-size:12px;}
-.sidebar .bd .bd-price{position:absolute; top:30px; left: 100px; font-size:12px;}
+/*left part*/
+.main { height: 270px; width: 721px; position: absolute; padding: 10px; border: 1px solid #dedede; }
+.main .hot-fashion { width: 211px; height: 270px; float: left; }
+.hot-fashion .hd { width: 211px; height: 58px; background-color: #b3a593; position: relative; background-image: url("./img/hf-hd.jpg"); }
+.hot-fashion .bd { width: 211px; height: 154px; padding: 9px 0 5px 0; background-color: #eaeaea; border-bottom: 1px solid #F2E8DE; }
+.hot-fashion .bd li { height: 26px; line-height: 24px; position: relative; font-size: 10px; font-family: '微软雅黑'; white-space: nowrap; }
+.hot-fashion .bd li:first-child { height: 25px }
+.hot-fashion .bd li:last-child { height: 25px }
+.hot-fashion .bd .bd-dot { display: inline-block; width: 3px; height: 3px; margin-left: 9px; background-color: #000; line-height: 24px; position: absolute; top: 50%; margin-top: -1.5px; }
+.hot-fashion .bd p { padding-left: 8px; position: absolute; left: 9px; border-bottom: 1px solid #D8D8D8; border-top: 1px solid #FFFFFF; }
+.hot-fashion .bd span { color: #A8397B; }
+.hot-fashion .bd .bd-first { border-top: none; }
+.hot-fashion .bd .bd-last { border-bottom: none; }
+.hot-fashion .ft { background-color: #443E3E; position: relative; height: 41px; border-top: 2px solid #ACA59D; }
+.hot-fashion .ft .ft-logo { width: 45px; height: 26px; background-image: url('./img/ft-logo.jpg'); background-position: center; background-repeat: no-repeat; position: absolute; top: 50%; margin-top: -13px; border-right: 1px solid #1F1B17; }
+.hot-fashion .ft p { height: 26px; padding-left: 10px; position: absolute; line-height: 13px; top: 50%; margin-top: -13px; font-family: "微软雅黑"; font-size: 10px; left: 46px; color: #FFFFFD; border-left: 1px solid #575352; }
+.hot-fashion .ft span { color: #ADA49D; }
+.main .img-container { width: 510px; height: 270px; float: left; position: relative; overflow: hidden; }
+.main .img-container .img-list { width: 2040px; height: 270px; position: absolute; }
+.img-container .img-list img { float: left; }
+.main .nav-btn { width: 16px; height: 16px; border: 1px solid #B0A7A2; color: #E17F29; background-color: #FEFEFF; float: right; position: relative; top: 244px; right: 2px; margin-right: 6px; text-align: center; line-height: 16px; font-size: 12px; }
+.main .active { background-color: #B4A592; color: #FEFBF4; border: 2px solid #B4A592; top: 243px; }
+.sidebar { height: 270px; width: 190px; position: absolute; padding: 10px; right: 0; border: 1px solid #dedede; }
+.sidebar .hd { width: 190px; height: 58px; background-image: url("./img/sidebar-hd.jpg"); margin-bottom: 1px; }
+.sidebar .bd li { width: 190px; height: 105px; background-color: #DE2D6D; position: relative; color: #FFECF7; }
+.sidebar .bd li:first-child { height: 104px; border-top: 1px solid #A04D6A; border-bottom: 1px dotted #FC6BA6; }
+.sidebar .bd li:last-child::after { content: ""; position: absolute; z-index: -1; bottom: 13px; right: 10px; width: 50%; height: 20%; border: 1px solid blue; box-shadow: 0 15px 10px #8D8D8F; transform: rotate(3deg); -ms-transform: rotate(3deg); 	/* IE 9 */ -moz-transform: rotate(3deg); 	/* Firefox */ -webkit-transform: rotate(3deg); /* Safari 和 Chrome */ -o-transform: rotate(3deg); }
+.sidebar .bd .bd-photo { position: absolute; left: 8px; top: 8px; border-left: 1px solid #A94A69; }
+.sidebar .bd .bd-name { position: absolute; top: 10px; left: 100px; font-size: 11px; }
+.sidebar .bd .bd-price { position: absolute; top: 30px; left: 100px; font-size: 12px; }
+
 /*.sidebar .bd .bd-special{height:25px; position:absolute; top:51px; left: 100px; font-size:22px; color:#FFECF7; vertical-align: center;}*/
-.sidebar .bd .half{display:inline-block; width:31px; text-align:center; height:18px; line-height:18px; position:absolute; left:98px; top:53px; background-color: #000;font-size:12px;}
-.sidebar .bd .tri{display:inline-block; height:0; width:0; position:absolute; left:129px; top:57px;border:5px solid; border-color:#DE2D6D #DE2D6D #DE2D6D #000;}
-.sidebar .bd .num{display:inline-block; position:absolute; left:136px; top:46px; font-size:25px; font-weight:bold;}
-.sidebar .bd .bd-people{position:absolute; top:80px; left: 100px; font-size:12px; color:#FFECF7;}
-.sidebar .bd .bd-people span{color:#FFB720;}
+.sidebar .bd .half { display: inline-block; width: 31px; text-align: center; height: 18px; line-height: 18px; position: absolute; left: 98px; top: 53px; background-color: #000; font-size: 12px; }
+.sidebar .bd .tri { display: inline-block; height: 0; width: 0; position: absolute; left: 129px; top: 57px; border: 5px solid; border-color: #DE2D6D #DE2D6D #DE2D6D #000; }
+.sidebar .bd .num { display: inline-block; position: absolute; left: 136px; top: 46px; font-size: 25px; font-weight: bold; }
+.sidebar .bd .bd-people { position: absolute; top: 80px; left: 100px; font-size: 12px; color: #FFECF7; }
+.sidebar .bd .bd-people span { color: #FFB720; }

@@ -1,7 +1,7 @@
 (function(){
 	var btnIndex = 2;
 	$('.nav-btn').each(function(index, item){
-		$(item).click(function(item){
+		$(item).on('click',function(item){
 			slide(index);
 		});
 	});
